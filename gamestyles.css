@@ -1,0 +1,79 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.background{
+    height: 100vh;
+    width: 100vw;
+    background: url("pictures/gamesbackground.jpg") no-repeat center center fixed;
+    background-size: cover;
+}
+
+.hironobird{
+    height: 100px;
+    width: 130px;
+    position: fixed;
+    top: 40vh;
+    left: 30vw;
+    z-index: 100;
+}
+
+.pipe_sprite{
+    position: fixed;
+    left: 100vw;
+    height: 70vh;
+    width: 6vw;
+    background: radial-gradient(lightgreen, green);
+    border: 5px solid black;
+}
+
+.message {
+    position: absolute;
+    z-index: 10;
+    color: black;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.messageStyle{
+    background: linear-gradient(yellow, orange, red, black);
+    padding: 30px;
+    box-shadow: rgba(0,0,0,0.24) 0px 3px 8px;
+    border-radius: 10px;
+}
+
+.score{
+    position: fixed;
+    z-index: 10;
+    font-size: 8vh;
+    color: white;
+    -webkit-text-stroke: 2px black;
+    top: 0;
+    margin: 10px;
+}
+
+.score_val{
+    color: gold;
+    font-weight: bold;
+}
+
+@media only screen and (max-width: 1000px){
+    .message{
+        font-size: 40px;
+        top: 50%;
+        white-space: nowrap;
+        color: black;
+    }
+    .hironobird{
+        width: 130px;
+        height: 100px;
+    }
+    .pipe_sprite{
+        width: 14vw;
+    }
+}
